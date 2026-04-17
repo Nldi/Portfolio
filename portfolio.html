@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Votre Nom</title>
+<link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<main class="page">
+
+  <!-- ── HERO ── -->
+  <section id="about" class="hero">
+    <div class="avatar-wrap">
+      <svg class="avatar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="18" r="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="hero-card glass">
+      <div class="traffic">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="win-title">À propos — Finder</span>
+      </div>
+      <div class="hero-body">
+        <h1 class="hero-name">Votre Nom</h1>
+        <p class="hero-title">Informaticien · Développeur Full-Stack</p>
+        <p class="hero-bio">Passionné par le développement web, l'infrastructure réseau et les nouvelles technologies. Je conçois des solutions modernes et performantes pour répondre aux besoins métiers.</p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            France
+          </span>
+          <span class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+            </svg>
+            contact@email.com
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section" style="animation-delay:.10s">
+    <h2 class="section-title">Projets</h2>
+    <div class="carousel-wrap">
+      <button class="carousel-btn prev" onclick="scroll(-1)" aria-label="Précédent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div class="carousel" id="carousel">
+        <!-- Card 1 -->
+        <div class="proj-card glass">
+          <div class="traffic">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="win-title">Application Web Full-Stack</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Développement d'une application complète avec authentification, base de données et API REST.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="proj-card glass">
+          <div class="traffic">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="win-title">Infrastructure Réseau</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Mise en place d'une infrastructure réseau sécurisée avec monitoring et gestion centralisée.</p>
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Ansible</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="proj-card glass">
+          <div class="traffic">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="win-title">Application Mobile</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Création d'une application mobile cross-platform avec synchronisation cloud.</p>
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="proj-card glass">
+          <div class="traffic">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="win-title">Dashboard Analytics</span>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Interface de visualisation de données en temps réel avec tableaux de bord interactifs.</p>
+            <div class="tags">
+              <span class="tag">Vue.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">Redis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" onclick="scroll(1)" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section" style="animation-delay:.20s">
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-grid">
+      <div class="skill-card glass">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <span class="skill-name">Frontend</span>
+        <span class="skill-items">React · Vue.js · TypeScript · Tailwind CSS</span>
+      </div>
+      <div class="skill-card glass">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <span class="skill-name">Backend</span>
+        <span class="skill-items">Node.js · Python · Express · REST / GraphQL</span>
+      </div>
+      <div class="skill-card glass">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <span class="skill-name">Base de données</span>
+        <span class="skill-items">PostgreSQL · MySQL · MongoDB · Redis</span>
+      </div>
+      <div class="skill-card glass">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <span class="skill-name">DevOps</span>
+        <span class="skill-items">Docker · Linux · Ansible · CI/CD · Nginx</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section" style="animation-delay:.30s">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-card glass">
+      <div class="contact-text">
+        <h3>Travaillons ensemble</h3>
+        <p>Disponible pour des missions freelance ou des opportunités en CDI.</p>
+      </div>
+      <a href="mailto:contact@email.com" class="btn-glass">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+        M'écrire
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── DOCK ── -->
+<nav class="dock" role="navigation" aria-label="Navigation principale">
+  <a href="#about" class="dock-item active" title="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  </a>
+  <a href="#about" class="dock-item" title="À propos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  </a>
+  <a href="#projects" class="dock-item" title="Projets">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+  </a>
+  <a href="#skills" class="dock-item" title="Compétences">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+  </a>
+  <div class="dock-sep"></div>
+  <a href="mailto:contact@email.com" class="dock-item" title="Email">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+  </a>
+  <a href="#" class="dock-item" title="GitHub">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+  </a>
+  <a href="#" class="dock-item" title="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+  </a>
+</nav>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  function scroll(dir) {
+    const card = carousel.querySelector('.proj-card');
+    const w = card.offsetWidth + 16;
+    carousel.scrollBy({ left: dir * w, behavior: 'smooth' });
+  }
+
+  // Dock active state on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const dockItems = document.querySelectorAll('.dock-item');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        dockItems.forEach(i => i.classList.remove('active'));
+        const a = document.querySelector(`.dock-item[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
