@@ -1,0 +1,402 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Votre Nom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+ 
+ 
+ <!-- ===============================
+       NAVBAR
+  =============================== -->
+</head>
+<body>
+  <nav>
+    <div class="nav-avatar" onclick="allerPage('accueil')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+      </svg>
+    </div>
+
+    <ul class="nav-liens">
+      <li><a href="#" onclick="allerPage('accueil'); return false;">Accueil</a></li>
+      <li><a href="#" onclick="allerPage('projets'); return false;">Projets</a></li>
+      <li><a href="#" onclick="allerPage('competences'); return false;">Compétences</a></li>
+      <li><a href="#" onclick="allerPage('formation'); return false;">Formation</a></li>
+      <li><a href="#" onclick="allerPage('contact'); return false;">Contact</a></li>
+    </ul>
+
+    <div class="nav-droite">
+      <a href="#" class="nav-icone" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+        </svg>
+      </a>
+      <button class="nav-icone" onclick="toggleMode()" id="btn-mode" title="Mode clair / sombre">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===============================
+       PAGE : ACCUEIL
+  =============================== -->
+  <div class="page active" id="page-accueil">
+    <main>
+
+      <!-- Présentation -->
+      <section>
+        <div class="carte profil">
+          <div class="profil-avatar">
+            <svg viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="18" r="9"/>
+              <path d="M8 42c0-8.84 7.16-16 16-16s16 7.16 16 16"/>
+            </svg>
+          </div>
+          <div>
+            <div class="profil-nom">Furkan Ugurlu</div>
+            <div class="profil-role">Étudiant BUT Informatique — à l'IUT2 de Grenoble</div>
+            <p class="profil-bio">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe rem, 
+              architecto est sed porro officia eos ex ipsum aut consectetur et! Pariatur, 
+              recusandae ipsum fugit eligendi aut fugiat doloribus quisquam.
+            </p>
+            <div class="profil-infos">
+              <span class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                France
+              </span>
+              <span class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+                <a href="#">p.nom [at] etudiant.univ.fr</a>
+              </span>
+              <span class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                <a href="#">github.com/votrenom</a>
+              </span>
+              <span class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <a href="#">linkedin.com/in/votrenom</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Diplômes obtenus -->
+      <section>
+        <p class="section-titre-petit">Diplômes</p>
+        <h2>Formations &amp; diplômes</h2>
+        <div class="diplomes-grid">
+          <div class="diplome-card">
+            <div class="diplome-annee">2023 – 2026 (en cours)</div>
+            <div class="diplome-titre">BUT Informatique</div>
+            <div class="diplome-lieu">IUT de votre ville</div>
+          </div>
+          <div class="diplome-card">
+            <div class="diplome-annee">2023</div>
+            <div class="diplome-titre">Baccalauréat STI2D</div>
+            <div class="diplome-lieu">Lycée Polyvalent Vaucanson</div>
+          </div>
+          <div class="diplome-card">
+            <div class="diplome-annee">Été 2025</div>
+            <div class="diplome-titre">Stage — Développeur Web</div>
+            <div class="diplome-lieu">Nom de l'entreprise · 2 mois</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
+  </div>
+
+  <!-- ===============================
+       PAGE : PROJETS (liste)
+  =============================== -->
+  <div class="page" id="page-projets">
+    <main>
+      <section>
+        <p class="section-titre-petit">Réalisations</p>
+        <h2>Projets</h2>
+        <div class="grille-projets">
+
+          <div class="projet-card" onclick="allerDetail(0)">
+            <div class="projet-image">🌐</div>
+            <div class="projet-body">
+              <div class="projet-nom">Application Web Full-Stack</div>
+              <p class="projet-description">Application complète avec authentification, base de données et API REST. Déployée sur VPS.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div>
+              <button class="projet-lien">
+                Voir le détail
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="projet-card" onclick="allerDetail(1)">
+            <div class="projet-image">🖧</div>
+            <div class="projet-body">
+              <div class="projet-nom">Infrastructure Réseau</div>
+              <p class="projet-description">Mise en place d'une infrastructure sécurisée avec monitoring, pare-feu et gestion centralisée.</p>
+              <div class="tags"><span class="tag">Linux</span><span class="tag">Docker</span><span class="tag">Ansible</span></div>
+              <button class="projet-lien">
+                Voir le détail
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="projet-card" onclick="allerDetail(2)">
+            <div class="projet-image">📱</div>
+            <div class="projet-body">
+              <div class="projet-nom">Application Mobile</div>
+              <p class="projet-description">Application cross-platform avec synchronisation cloud en temps réel et notifications push.</p>
+              <div class="tags"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">TypeScript</span></div>
+              <button class="projet-lien">
+                Voir le détail
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="projet-card" onclick="allerDetail(3)">
+            <div class="projet-image">📊</div>
+            <div class="projet-body">
+              <div class="projet-nom">Dashboard Analytics</div>
+              <p class="projet-description">Tableau de bord de visualisation de données avec graphiques interactifs et export PDF.</p>
+              <div class="tags"><span class="tag">Vue.js</span><span class="tag">Python</span><span class="tag">Chart.js</span></div>
+              <button class="projet-lien">
+                Voir le détail
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+  </div>
+
+  <!-- ===============================
+       PAGE : DETAIL PROJET (PPP)
+  =============================== -->
+  <div class="page" id="page-detail">
+    <main>
+      <button class="ppp-back" onclick="allerPage('projets')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Retour aux projets
+      </button>
+
+      <div class="ppp-header">
+        <div class="ppp-emoji" id="detail-emoji">🌐</div>
+        <div>
+          <h1 id="detail-titre">Titre du projet</h1>
+          <p id="detail-sous-titre">Sous-titre</p>
+        </div>
+      </div>
+
+      <div class="ppp-grid">
+        <div class="ppp-section">
+          <h3>Description</h3>
+          <p id="detail-description">—</p>
+        </div>
+        <div class="ppp-section">
+          <h3>Objectifs</h3>
+          <ul id="detail-objectifs"></ul>
+        </div>
+      </div>
+
+      <div class="ppp-grid">
+        <div class="ppp-section">
+          <h3>Travail en groupe</h3>
+          <p id="detail-groupe">—</p>
+        </div>
+        <div class="ppp-section">
+          <h3>Mon rôle individuel</h3>
+          <p id="detail-individuel">—</p>
+        </div>
+      </div>
+
+      <div class="ppp-grid">
+        <div class="ppp-section">
+          <h3>Compétences mobilisées</h3>
+          <ul id="detail-competences"></ul>
+        </div>
+        <div class="ppp-section">
+          <h3>Techniques &amp; savoirs acquis</h3>
+          <ul id="detail-techniques"></ul>
+        </div>
+      </div>
+
+      <div class="ppp-grid full">
+        <div class="ppp-section">
+          <h3>Technologies utilisées</h3>
+          <div class="ppp-badges" id="detail-techs"></div>
+        </div>
+      </div>
+
+    </main>
+    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+  </div>
+
+  <!-- ===============================
+       PAGE : COMPETENCES
+  =============================== -->
+  <div class="page" id="page-competences">
+    <main>
+      <section>
+        <p class="section-titre-petit">Savoir-faire</p>
+        <h2>Compétences</h2>
+        <div class="grille-competences">
+          <div>
+            <p class="groupe-titre">Développement</p>
+            <div class="competence">
+              <div class="competence-ligne">JavaScript / TypeScript <span>Avancé</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:85%"></div></div>
+            </div>
+            <div class="competence">
+              <div class="competence-ligne">React / Vue.js <span>Intermédiaire</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:75%"></div></div>
+            </div>
+            <div class="competence">
+              <div class="competence-ligne">Python <span>Intermédiaire</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:70%"></div></div>
+            </div>
+            <div class="competence">
+              <div class="competence-ligne">SQL / PostgreSQL <span>Intermédiaire</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:65%"></div></div>
+            </div>
+          </div>
+          <div>
+            <p class="groupe-titre">Systèmes et Réseaux</p>
+            <div class="competence">
+              <div class="competence-ligne">Linux / Bash <span>Avancé</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:80%"></div></div>
+            </div>
+            <div class="competence">
+              <div class="competence-ligne">Docker <span>Intermédiaire</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:70%"></div></div>
+            </div>
+            <div class="competence">
+              <div class="competence-ligne">Réseaux TCP/IP, VLAN <span>Intermédiaire</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:65%"></div></div>
+            </div>
+            <div class="competence">
+              <div class="competence-ligne">Git <span>Courant</span></div>
+              <div class="barre-fond"><div class="barre-remplie" style="width:72%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+  </div>
+
+  <!-- ===============================
+       PAGE : FORMATION
+  =============================== -->
+  <div class="page" id="page-formation">
+    <main>
+      <section>
+        <p class="section-titre-petit">Parcours</p>
+        <h2>Formation</h2>
+
+        <div class="formation-item">
+          <div class="formation-point"></div>
+          <div>
+            <div class="formation-annee">2023 – 2026 (en cours)</div>
+            <div class="formation-titre">BUT Informatique</div>
+            <div class="formation-lieu">IUT de votre ville — Parcours Développement Web</div>
+          </div>
+        </div>
+        <div class="formation-item">
+          <div class="formation-point ancien"></div>
+          <div>
+            <div class="formation-annee">Été 2025</div>
+            <div class="formation-titre">Stage — Développeur Web</div>
+            <div class="formation-lieu">Nom de l'entreprise · 2 mois</div>
+          </div>
+        </div>
+        <div class="formation-item">
+          <div class="formation-point ancien"></div>
+          <div>
+            <div class="formation-annee">2023</div>
+            <div class="formation-titre">Baccalauréat STI2D</div>
+            <div class="formation-lieu">Lycée de votre ville · Mention Bien</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+  </div>
+
+  <!-- ===============================
+       PAGE : CONTACT
+  =============================== -->
+  <div class="page" id="page-contact">
+    <main>
+      <section>
+        <p class="section-titre-petit">Me joindre</p>
+        <h2>Contact</h2>
+        <div class="contact-grille">
+
+          <div>
+            <p class="contact-texte">
+              Disponible pour une alternance, un stage ou tout échange autour d'un projet.
+              N'hésitez pas à me contacter, je réponds rapidement !
+            </p>
+            <div class="contact-liens">
+              <a href="#" class="contact-lien">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+                p.nom [at] etudiant.univ.fr
+              </a>
+              <a href="#" class="contact-lien">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                github.com/votrenom
+              </a>
+              <a href="#" class="contact-lien">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                linkedin.com/in/votrenom
+              </a>
+            </div>
+          </div>
+
+          <form class="formulaire" onsubmit="envoyerFormulaire(event)">
+            <div class="formulaire-ligne">
+              <div>
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Votre nom" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div>
+              <label for="sujet">Sujet</label>
+              <input type="text" id="sujet" placeholder="Objet du message" required>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="bouton-envoyer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Envoyer
+            </button>
+          </form>
+
+        </div>
+      </section>
+    </main>
+    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+  </div>
+
+</body>
