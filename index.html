@@ -14,403 +14,382 @@
   <div class="bg-shapes">
     <div class="shape shape-1"></div>
     <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
   </div>
 
   <!-- NAVBAR -->
-  <nav>
-    <div class="nav-nom" onclick="allerPage('accueil')">F.U</div>
+  <nav id="navbar">
+    <div class="nav-nom" onclick="window.scrollTo({top:0,behavior:'smooth'})">F.U</div>
     <ul class="nav-liens">
-      <li><a href="#" onclick="allerPage('accueil'); return false;" class="nav-link active" data-page="accueil">Accueil</a></li>
-      <li><a href="#" onclick="allerPage('projets'); return false;" class="nav-link" data-page="projets">Projets</a></li>
-      <li><a href="#" onclick="allerPage('competences'); return false;" class="nav-link" data-page="competences">Compétences</a></li>
-      <li><a href="#" onclick="allerPage('formation'); return false;" class="nav-link" data-page="formation">Formation</a></li>
-      <li><a href="#" onclick="allerPage('contact'); return false;" class="nav-link" data-page="contact">Contact</a></li>
+      <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+      <li><a href="#projets" class="nav-link">Projets</a></li>
+      <li><a href="#competences" class="nav-link">Compétences</a></li>
+      <li><a href="#formation" class="nav-link">Formation</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <button class="btn-theme" onclick="toggleMode()" id="btn-mode" title="Changer de thème">
+    <a href="https://github.com/furkanugurlu" target="_blank" class="nav-github" title="Mon GitHub">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+      </svg>
+    </a>
+    <button class="nav-burger" onclick="toggleMenu()" title="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
       </svg>
     </button>
   </nav>
 
-  <!-- ====== PAGE ACCUEIL ====== -->
-  <div class="page active" id="page-accueil">
-    <main>
+  <main>
 
-      <section class="hero">
-        <div class="hero-texte">
-          <p class="hero-salut">Salut, moi c'est</p>
-          <h1 class="hero-nom">Furkan Ugurlu</h1>
-          <p class="hero-role">Étudiant en <span class="accent">BUT Informatique</span> — IUT2 de Grenoble</p>
-          <p class="hero-bio">
-            Passionné par le développement web et la programmation depuis le lycée.
-            En première année de BUT Informatique, je découvre chaque jour de nouvelles
-            technologies et j'aime construire des petits projets pour apprendre en pratiquant.
-          </p>
-          <div class="hero-liens">
-            <a href="#" class="btn-principal" onclick="allerPage('projets'); return false;">Voir mes projets</a>
-            <a href="#" class="btn-secondaire" onclick="allerPage('contact'); return false;">Me contacter</a>
-          </div>
-        </div>
-        <div class="hero-visuel">
-          <div class="hero-card">
-            <div class="code-bloc">
-              <span class="code-ligne"><span class="code-mot">const</span> etudiant = {</span>
-              <span class="code-ligne indent"><span class="code-cle">nom</span>: <span class="code-str">"Furkan"</span>,</span>
-              <span class="code-ligne indent"><span class="code-cle">formation</span>: <span class="code-str">"BUT Info"</span>,</span>
-              <span class="code-ligne indent"><span class="code-cle">annee</span>: <span class="code-num">1</span>,</span>
-              <span class="code-ligne indent"><span class="code-cle">motivé</span>: <span class="code-bool">true</span></span>
-              <span class="code-ligne">};</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Infos rapides -->
-      <section class="infos-rapides">
-        <div class="info-card">
-          <div class="info-icone">
+    <!-- ====== ACCUEIL ====== -->
+    <section id="accueil" class="hero">
+      <div class="hero-texte">
+        <p class="hero-salut">Salut, moi c'est</p>
+        <h1 class="hero-nom">Furkan Ugurlu</h1>
+        <p class="hero-role">Étudiant en <span class="accent">BUT Informatique</span> — 1ère année</p>
+        <p class="hero-sous-role">IUT2 de Grenoble</p>
+        <p class="hero-bio">
+          Passionné par les réseaux, l'administration système et la sécurité informatique.
+          Je souhaite m'orienter vers le métier d'administrateur systèmes et réseaux.
+        </p>
+        <div class="hero-infos">
+          <span class="hero-info">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="info-label">Localisation</div>
-          <div class="info-valeur">Grenoble, France</div>
+            Grenoble, France
+          </span>
+          <span class="hero-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15z"/></svg>
+            Bac STI2D — Lycée Vaucanson (2024)
+          </span>
         </div>
-        <div class="info-card">
-          <div class="info-icone">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
-          </div>
-          <div class="info-label">Formation</div>
-          <div class="info-valeur">BUT Informatique — 1ère année</div>
-        </div>
-        <div class="info-card">
-          <div class="info-icone">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <div class="info-label">Passion</div>
-          <div class="info-valeur">Développement Web</div>
-        </div>
-      </section>
-
-    </main>
-    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
-  </div>
-
-  <!-- ====== PAGE PROJETS ====== -->
-  <div class="page" id="page-projets">
-    <main>
-      <section>
-        <p class="section-label">Mes réalisations</p>
-        <h2>Projets</h2>
-        <div class="grille-projets">
-
-          <div class="projet-card" onclick="allerDetail(0)">
-            <div class="projet-icone">🌐</div>
-            <div class="projet-contenu">
-              <h3 class="projet-nom">Site Web Personnel</h3>
-              <p class="projet-desc">Mon premier site web réalisé en HTML et CSS pur. Un portfolio simple pour apprendre les bases du web.</p>
-              <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="projet-card" onclick="allerDetail(1)">
-            <div class="projet-icone">🎮</div>
-            <div class="projet-contenu">
-              <h3 class="projet-nom">Jeu du Pendu en Java</h3>
-              <p class="projet-desc">Jeu du pendu en console développé en Java. Gestion de fichiers pour les listes de mots et boucle de jeu.</p>
-              <div class="tags">
-                <span class="tag">Java</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="projet-card" onclick="allerDetail(2)">
-            <div class="projet-icone">🗃️</div>
-            <div class="projet-contenu">
-              <h3 class="projet-nom">Base de Données Médiathèque</h3>
-              <p class="projet-desc">Conception et création d'une base de données pour gérer les emprunts d'une médiathèque avec SQL.</p>
-              <div class="tags">
-                <span class="tag">SQL</span>
-                <span class="tag">PostgreSQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="projet-card" onclick="allerDetail(3)">
-            <div class="projet-icone">🐍</div>
-            <div class="projet-contenu">
-              <h3 class="projet-nom">Script Python — Analyse de données</h3>
-              <p class="projet-desc">Programme Python pour lire un fichier CSV, calculer des statistiques et afficher les résultats sous forme de texte.</p>
-              <div class="tags">
-                <span class="tag">Python</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </main>
-    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
-  </div>
-
-  <!-- ====== PAGE DETAIL PROJET ====== -->
-  <div class="page" id="page-detail">
-    <main>
-      <button class="btn-retour" onclick="allerPage('projets')">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Retour aux projets
-      </button>
-
-      <div class="detail-header">
-        <span class="detail-emoji" id="detail-emoji">🌐</span>
-        <div>
-          <h1 id="detail-titre">Titre du projet</h1>
-          <p class="detail-sous-titre" id="detail-sous-titre">Sous-titre</p>
+        <div class="hero-liens">
+          <a href="#projets" class="btn-principal">Voir mes projets</a>
+          <a href="#contact" class="btn-secondaire">Me contacter</a>
         </div>
       </div>
-
-      <div class="detail-grille">
-        <div class="detail-bloc">
-          <h3>Description</h3>
-          <p id="detail-description">—</p>
-        </div>
-        <div class="detail-bloc">
-          <h3>Objectifs</h3>
-          <ul id="detail-objectifs"></ul>
+      <div class="hero-visuel">
+        <div class="hero-card">
+          <div class="terminal-header">
+            <div class="terminal-tab">
+              <svg class="terminal-tab-icon" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              Konsole
+            </div>
+            <div class="terminal-window-btns">
+              <span class="terminal-window-btn"><svg viewBox="0 0 10 10"><line x1="2" y1="8" x2="8" y2="8"/></svg></span>
+              <span class="terminal-window-btn"><svg viewBox="0 0 10 10"><rect x="1.5" y="1.5" width="7" height="7" rx="0.5"/></svg></span>
+              <span class="terminal-window-btn"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></span>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <span class="term-ligne"><span class="term-user">furkan@iut2</span><span class="term-sep">:</span><span class="term-path">~</span><span class="term-sep">$</span> whoami</span>
+            <span class="term-ligne term-output">furkan.ugurlu</span>
+            <span class="term-ligne"><span class="term-user">furkan@iut2</span><span class="term-sep">:</span><span class="term-path">~</span><span class="term-sep">$</span> cat formation.txt</span>
+            <span class="term-ligne term-output">BUT Informatique — 1ère année</span>
+            <span class="term-ligne term-output">IUT2 de Grenoble</span>
+            <span class="term-ligne"><span class="term-user">furkan@iut2</span><span class="term-sep">:</span><span class="term-path">~</span><span class="term-sep">$</span> echo $OBJECTIF</span>
+            <span class="term-ligne term-output">Admin Systèmes &amp; Réseaux</span>
+            <span class="term-ligne"><span class="term-user">furkan@iut2</span><span class="term-sep">:</span><span class="term-path">~</span><span class="term-sep">$</span> <span class="term-curseur"></span></span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="detail-grille">
-        <div class="detail-bloc">
-          <h3>Travail en groupe</h3>
-          <p id="detail-groupe">—</p>
+    <!-- ====== PROJETS ====== -->
+    <section id="projets">
+      <p class="section-label">Mes réalisations</p>
+      <h2>Projets</h2>
+      <div class="grille-projets">
+
+        <div class="projet-card" onclick="ouvrirDetail(0)">
+          <div class="projet-icone">🖧</div>
+          <div class="projet-contenu">
+            <h3 class="projet-nom">Configuration Réseau — VLANs</h3>
+            <p class="projet-desc">Mise en place d'une architecture réseau segmentée avec VLANs sur un switch manageable dans un environnement simulé.</p>
+            <div class="tags">
+              <span class="tag">Réseau</span>
+              <span class="tag">VLAN</span>
+              <span class="tag">Cisco</span>
+            </div>
+          </div>
         </div>
-        <div class="detail-bloc">
-          <h3>Mon rôle</h3>
-          <p id="detail-individuel">—</p>
+
+        <div class="projet-card" onclick="ouvrirDetail(1)">
+          <div class="projet-icone">🐧</div>
+          <div class="projet-contenu">
+            <h3 class="projet-nom">Installation Serveur Linux</h3>
+            <p class="projet-desc">Installation et configuration d'un serveur Debian avec services réseau (SSH, Apache) pour un TP d'administration.</p>
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">Debian</span>
+              <span class="tag">Bash</span>
+            </div>
+          </div>
         </div>
+
+        <div class="projet-card" onclick="ouvrirDetail(2)">
+          <div class="projet-icone">🗃️</div>
+          <div class="projet-contenu">
+            <h3 class="projet-nom">Base de Données Médiathèque</h3>
+            <p class="projet-desc">Conception d'une base de données relationnelle pour gérer les emprunts d'une médiathèque fictive avec SQL.</p>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet-card" onclick="ouvrirDetail(3)">
+          <div class="projet-icone">🌐</div>
+          <div class="projet-contenu">
+            <h3 class="projet-nom">Site Web — Portfolio</h3>
+            <p class="projet-desc">Développement de ce portfolio en HTML, CSS et JavaScript pour présenter mon parcours et mes projets.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="detail-grille">
-        <div class="detail-bloc">
-          <h3>Compétences mobilisées</h3>
-          <ul id="detail-competences"></ul>
+    <!-- ====== MODALE DETAIL PROJET ====== -->
+    <div class="modale-overlay" id="modale-overlay" onclick="fermerDetail(event)">
+      <div class="modale" onclick="event.stopPropagation()">
+        <button class="modale-fermer" onclick="fermerDetail()">&times;</button>
+
+        <div class="detail-header">
+          <span class="detail-emoji" id="detail-emoji">🖧</span>
+          <div>
+            <h2 id="detail-titre">Titre du projet</h2>
+            <p class="detail-sous-titre" id="detail-sous-titre">Sous-titre</p>
+          </div>
         </div>
-        <div class="detail-bloc">
-          <h3>Ce que j'ai appris</h3>
-          <ul id="detail-techniques"></ul>
+
+        <div class="detail-grille">
+          <div class="detail-bloc">
+            <h3>Description</h3>
+            <p id="detail-description">—</p>
+          </div>
+          <div class="detail-bloc">
+            <h3>Objectifs</h3>
+            <ul id="detail-objectifs"></ul>
+          </div>
         </div>
+
+        <div class="detail-grille">
+          <div class="detail-bloc">
+            <h3>Travail en groupe</h3>
+            <p id="detail-groupe">—</p>
+          </div>
+          <div class="detail-bloc">
+            <h3>Mon rôle individuel</h3>
+            <p id="detail-individuel">—</p>
+          </div>
+        </div>
+
+        <div class="detail-grille">
+          <div class="detail-bloc">
+            <h3>Compétences mobilisées</h3>
+            <ul id="detail-competences"></ul>
+          </div>
+          <div class="detail-bloc">
+            <h3>Techniques &amp; savoirs acquis</h3>
+            <ul id="detail-techniques"></ul>
+          </div>
+        </div>
+
+        <div class="detail-grille full">
+          <div class="detail-bloc">
+            <h3>Technologies utilisées</h3>
+            <div class="detail-badges" id="detail-techs"></div>
+          </div>
+        </div>
+
       </div>
+    </div>
 
-      <div class="detail-grille full">
-        <div class="detail-bloc">
-          <h3>Technologies</h3>
-          <div class="detail-badges" id="detail-techs"></div>
+    <!-- ====== COMPETENCES ====== -->
+    <section id="competences">
+      <p class="section-label">Référentiel BUT Informatique</p>
+      <h2>Compétences</h2>
+      <p class="comp-intro">Compétences du référentiel BUT Informatique mobilisées au cours de ma première année.</p>
+
+      <div class="comp-liste">
+
+        <div class="comp-card">
+          <div class="comp-numero">C1</div>
+          <div class="comp-contenu">
+            <h3>Réaliser un développement d'application</h3>
+            <p>Développer, concevoir, coder, tester et intégrer une solution informatique pour un client.</p>
+            <div class="comp-ac">
+              <span class="ac-tag">Implémenter des conceptions simples</span>
+              <span class="ac-tag">Élaborer des conceptions simples</span>
+              <span class="ac-tag">Faire des essais et évaluer les résultats</span>
+              <span class="ac-tag">Développer des interfaces utilisateurs</span>
+            </div>
+          </div>
         </div>
+
+        <div class="comp-card">
+          <div class="comp-numero">C2</div>
+          <div class="comp-contenu">
+            <h3>Optimiser des applications informatiques</h3>
+            <p>Proposer des applications optimisées en fonction de critères : temps d'exécution, précision, consommation de ressources.</p>
+            <div class="comp-ac">
+              <span class="ac-tag">Analyser un problème avec méthode</span>
+              <span class="ac-tag">Comparer des algorithmes classiques</span>
+              <span class="ac-tag">Expérimenter la compilation et les représentations bas niveau</span>
+              <span class="ac-tag">Formaliser et mettre en œuvre des outils mathématiques</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-numero">C3</div>
+          <div class="comp-contenu">
+            <h3>Administrer des systèmes informatiques communicants</h3>
+            <p>Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles les infrastructures, services et réseaux.</p>
+            <div class="comp-ac">
+              <span class="ac-tag">Identifier les composants d'un système numérique</span>
+              <span class="ac-tag">Utiliser les fonctionnalités d'un système multitâches</span>
+              <span class="ac-tag">Installer et configurer un OS et des outils</span>
+              <span class="ac-tag">Configurer un poste dans un réseau d'entreprise</span>
+              <span class="ac-tag">Concevoir des applications communicantes</span>
+              <span class="ac-tag">Sécuriser les services et données</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-numero">C4</div>
+          <div class="comp-contenu">
+            <h3>Gérer des données de l'information</h3>
+            <p>Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations.</p>
+            <div class="comp-ac">
+              <span class="ac-tag">Mettre à jour et interroger une base de données relationnelle</span>
+              <span class="ac-tag">Visualiser des données</span>
+              <span class="ac-tag">Concevoir une base de données à partir d'un cahier des charges</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-numero">C5</div>
+          <div class="comp-contenu">
+            <h3>Conduire un projet</h3>
+            <p>Satisfaire les besoins des utilisateurs, organiser et piloter un projet informatique avec des méthodes classiques ou agiles.</p>
+            <div class="comp-ac">
+              <span class="ac-tag">Appréhender les besoins du client et de l'utilisateur</span>
+              <span class="ac-tag">Mettre en place les outils de gestion de projet</span>
+              <span class="ac-tag">Identifier les phases d'un cycle de développement</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-card">
+          <div class="comp-numero">C6</div>
+          <div class="comp-contenu">
+            <h3>Travailler dans une équipe informatique</h3>
+            <p>Acquérir et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe pluridisciplinaire.</p>
+            <div class="comp-ac">
+              <span class="ac-tag">Appréhender l'écosystème numérique</span>
+              <span class="ac-tag">Découvrir les aptitudes selon les secteurs informatiques</span>
+              <span class="ac-tag">Identifier les rôles dans une équipe</span>
+              <span class="ac-tag">Acquérir les compétences interpersonnelles</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </main>
-    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
-  </div>
+    </section>
 
-  <!-- ====== PAGE COMPETENCES ====== -->
-  <div class="page" id="page-competences">
-    <main>
-      <section>
-        <p class="section-label">Ce que je sais faire</p>
-        <h2>Compétences</h2>
-        <div class="competences-container">
+    <!-- ====== FORMATION ====== -->
+    <section id="formation">
+      <p class="section-label">Mon parcours</p>
+      <h2>Formation</h2>
+      <div class="timeline">
 
-          <div class="comp-groupe">
-            <h3 class="comp-titre">Langages</h3>
-            <div class="comp-item">
-              <span class="comp-nom">HTML / CSS</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">JavaScript</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">Java</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">Python</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">SQL</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
+        <div class="timeline-item actuel">
+          <div class="timeline-marqueur"></div>
+          <div class="timeline-contenu">
+            <span class="timeline-date">2024 – 2027 (en cours)</span>
+            <h3>BUT Informatique</h3>
+            <p>IUT2 de Grenoble — 1ère année</p>
+            <p class="timeline-detail">Formation couvrant le développement, les bases de données, l'administration système et réseaux, la gestion de projet et le travail en équipe.</p>
           </div>
-
-          <div class="comp-groupe">
-            <h3 class="comp-titre">Outils & Méthodes</h3>
-            <div class="comp-item">
-              <span class="comp-nom">Git / GitHub</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">Linux (Ubuntu)</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">VS Code</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-            <div class="comp-item">
-              <span class="comp-nom">Terminal / Bash</span>
-              <div class="comp-dots">
-                <span class="dot plein"></span>
-                <span class="dot plein"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </section>
-    </main>
-    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
-  </div>
 
-  <!-- ====== PAGE FORMATION ====== -->
-  <div class="page" id="page-formation">
-    <main>
-      <section>
-        <p class="section-label">Mon parcours</p>
-        <h2>Formation</h2>
-        <div class="timeline">
-
-          <div class="timeline-item actuel">
-            <div class="timeline-marqueur"></div>
-            <div class="timeline-contenu">
-              <span class="timeline-date">2024 – 2027 (en cours)</span>
-              <h3>BUT Informatique</h3>
-              <p>IUT2 de Grenoble — Parcours réalisation d'applications</p>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-marqueur"></div>
+          <div class="timeline-contenu">
+            <span class="timeline-date">2024</span>
+            <h3>Baccalauréat STI2D</h3>
+            <p>Lycée Polyvalent Vaucanson — Grenoble</p>
+            <p class="timeline-detail">Sciences et technologies de l'industrie et du développement durable. Spécialité Systèmes d'Information et Numérique (SIN).</p>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marqueur"></div>
-            <div class="timeline-contenu">
-              <span class="timeline-date">2024</span>
-              <h3>Baccalauréat STI2D</h3>
-              <p>Lycée Polyvalent Vaucanson — Grenoble</p>
-            </div>
-          </div>
-
         </div>
-      </section>
-    </main>
-    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
-  </div>
 
-  <!-- ====== PAGE CONTACT ====== -->
-  <div class="page" id="page-contact">
-    <main>
-      <section>
-        <p class="section-label">Me joindre</p>
-        <h2>Contact</h2>
-        <div class="contact-layout">
+      </div>
+    </section>
 
-          <div class="contact-info">
-            <p class="contact-intro">
-              Je suis ouvert à tout échange autour de projets, de stages ou simplement
-              pour discuter informatique. N'hésitez pas !
-            </p>
-            <div class="contact-liens">
-              <a href="mailto:furkan.ugurlu@etu.univ-grenoble-alpes.fr" class="contact-lien">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-                furkan.ugurlu [at] etu.univ-grenoble-alpes.fr
-              </a>
-              <a href="#" class="contact-lien">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                github.com/furkanugurlu
-              </a>
-            </div>
+    <!-- ====== CONTACT ====== -->
+    <section id="contact">
+      <p class="section-label">Me joindre</p>
+      <h2>Contact</h2>
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <p class="contact-intro">
+            Je suis disponible pour tout échange autour de projets, de stages ou simplement
+            pour discuter informatique. N'hésitez pas à me contacter !
+          </p>
+          <div class="contact-liens">
+            <a href="mailto:furkan.ugurlu@etu.univ-grenoble-alpes.fr" class="contact-lien">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+              furkan.ugurlu [at] etu.univ-grenoble-alpes.fr
+            </a>
+            <a href="https://github.com/furkanugurlu" target="_blank" class="contact-lien">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              github.com/furkanugurlu
+            </a>
+            <a href="#" class="contact-lien">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              linkedin.com/in/furkanugurlu
+            </a>
           </div>
+        </div>
 
-          <form class="formulaire" onsubmit="envoyerFormulaire(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" placeholder="Votre nom" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="votre@email.com" required>
-              </div>
+        <form class="formulaire" onsubmit="envoyerFormulaire(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" placeholder="Votre nom" required>
             </div>
             <div class="form-group">
-              <label for="sujet">Sujet</label>
-              <input type="text" id="sujet" placeholder="Objet du message" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="votre@email.com" required>
             </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" placeholder="Votre message..." required></textarea>
-            </div>
-            <button type="submit" class="btn-envoyer">Envoyer</button>
-          </form>
+          </div>
+          <div class="form-group">
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" placeholder="Objet du message" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-envoyer">Envoyer</button>
+        </form>
 
-        </div>
-      </section>
-    </main>
-    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
-  </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
 
 </body>
 </html>

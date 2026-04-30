@@ -1,145 +1,117 @@
-/* ── Données des projets ── */
+/* ── Données des projets (PPP) ── */
 var projets = [
   {
-    emoji: "🌐",
-    titre: "Site Web Personnel",
-    sousTitre: "Projet personnel — BUT Informatique 1ère année",
-    description: "Création de mon premier site web en HTML et CSS. L'objectif était de comprendre la structure d'une page web, le positionnement des éléments avec Flexbox, et de créer un design responsive. Le site présente mes centres d'intérêt et sert de premier portfolio.",
+    emoji: "🖧",
+    titre: "Configuration Réseau — VLANs",
+    sousTitre: "SAÉ — BUT Informatique 1ère année",
+    description: "Mise en place d'une architecture réseau segmentée pour un environnement simulé d'entreprise. Le projet consistait à configurer des VLANs sur un switch manageable pour séparer les différents services (administration, production, invités) et assurer la communication inter-VLAN via un routeur.",
     objectifs: [
-      "Apprendre les bases du HTML sémantique",
-      "Maîtriser le positionnement CSS (Flexbox)",
-      "Rendre le site responsive (adapté mobile)",
-      "Publier le site sur GitHub Pages"
+      "Segmenter un réseau en plusieurs VLANs",
+      "Configurer le routage inter-VLAN",
+      "Tester la connectivité entre les sous-réseaux",
+      "Documenter l'architecture réseau mise en place"
     ],
-    groupe: "Projet réalisé seul, en dehors des cours, pour mettre en pratique ce que j'apprenais en développement web.",
-    individuel: "J'ai conçu la maquette, écrit tout le code HTML et CSS, et appris à utiliser GitHub Pages pour mettre le site en ligne.",
+    groupe: "Projet réalisé en groupe de 3 dans le cadre d'une SAÉ. Nous avons travaillé ensemble sur la conception de l'architecture réseau, puis réparti les tâches de configuration entre les membres du groupe.",
+    individuel: "J'ai été responsable de la configuration des VLANs sur le switch (création, nommage, attribution des ports) et de la rédaction du schéma réseau. J'ai aussi aidé à déboguer les problèmes de communication inter-VLAN.",
     competences: [
-      "Structurer une page web en HTML",
-      "Styliser avec CSS et Flexbox",
-      "Adapter le design au mobile (media queries)",
-      "Utiliser Git pour versionner le code"
+      "C3 — Administrer des systèmes communicants : configurer un poste dans un réseau d'entreprise",
+      "C3 — Concevoir et développer des applications communicantes",
+      "C5 — Conduire un projet : identifier les phases du cycle de développement",
+      "C6 — Travailler en équipe : répartir les tâches et communiquer"
     ],
     techniques: [
-      "HTML5 sémantique (header, nav, main, footer)",
-      "CSS Flexbox pour la mise en page",
-      "Media queries pour le responsive",
-      "Déploiement avec GitHub Pages"
+      "Configuration de VLANs sur switch (mode access, mode trunk)",
+      "Adressage IP et sous-réseaux",
+      "Routage inter-VLAN avec un routeur",
+      "Rédaction de documentation technique avec schéma réseau"
     ],
-    techs: ["HTML", "CSS", "Git", "GitHub Pages"]
+    techs: ["Cisco Packet Tracer", "VLAN", "Routage", "TCP/IP"]
   },
   {
-    emoji: "🎮",
-    titre: "Jeu du Pendu en Java",
-    sousTitre: "Projet universitaire — BUT Informatique 1ère année",
-    description: "Développement d'un jeu du pendu en mode console avec Java. Le programme lit une liste de mots depuis un fichier texte, en choisit un au hasard, et le joueur doit deviner les lettres. Le jeu gère les tentatives restantes et affiche le pendu en ASCII art.",
+    emoji: "🐧",
+    titre: "Installation Serveur Linux",
+    sousTitre: "TP — BUT Informatique 1ère année",
+    description: "Installation et configuration d'un serveur Debian en machine virtuelle. Le projet couvre l'installation du système d'exploitation, la configuration réseau, la mise en place de services (SSH, Apache) et l'écriture de scripts Bash pour automatiser des tâches d'administration courantes.",
     objectifs: [
-      "Pratiquer la programmation orientée objet en Java",
-      "Gérer la lecture de fichiers texte",
-      "Implémenter une boucle de jeu complète",
-      "Gérer les entrées utilisateur et les erreurs"
+      "Installer un système Linux (Debian) en machine virtuelle",
+      "Configurer le réseau (IP statique, DNS, passerelle)",
+      "Mettre en place un serveur SSH et un serveur web Apache",
+      "Écrire des scripts Bash pour automatiser des tâches"
     ],
-    groupe: "Projet réalisé en binôme avec un camarade de promotion. Nous avons travaillé ensemble sur la conception et nous sommes réparti les classes à coder.",
-    individuel: "J'ai développé la classe principale du jeu (logique de jeu, vérification des lettres) et l'affichage en ASCII art du pendu.",
+    groupe: "Projet réalisé en binôme dans le cadre d'un TP d'administration système. Chacun avait sa machine virtuelle mais nous nous aidions mutuellement pour résoudre les problèmes.",
+    individuel: "J'ai réalisé l'installation complète du système, la configuration réseau, et j'ai écrit un script Bash de sauvegarde automatique des fichiers de configuration. J'ai aussi mis en place le serveur web Apache avec une page d'accueil personnalisée.",
     competences: [
-      "Programmation orientée objet (classes, méthodes)",
-      "Manipulation de fichiers en Java",
-      "Gestion des chaînes de caractères",
-      "Travail en binôme avec Git"
+      "C3 — Administrer : installer et configurer un OS et des outils de développement",
+      "C3 — Utiliser les fonctionnalités d'un système multitâches / multiutilisateurs",
+      "C3 — Sécuriser les services et données d'un système",
+      "C1 — Réaliser : implémenter des conceptions simples (scripts Bash)"
     ],
     techniques: [
-      "Classes Java (Scanner, File, ArrayList)",
-      "Boucles et conditions pour la logique de jeu",
-      "Lecture de fichier texte avec BufferedReader",
-      "Utilisation de Git pour travailler à deux"
+      "Installation Debian avec partitionnement manuel",
+      "Configuration réseau en ligne de commande (ip, /etc/network/interfaces)",
+      "Administration de services avec systemctl",
+      "Scripts Bash (boucles, conditions, cron)"
     ],
-    techs: ["Java", "Git"]
+    techs: ["Debian", "Bash", "SSH", "Apache", "VirtualBox"]
   },
   {
     emoji: "🗃️",
     titre: "Base de Données Médiathèque",
-    sousTitre: "Projet universitaire — BUT Informatique 1ère année",
-    description: "Conception et création d'une base de données relationnelle pour une médiathèque fictive. Le projet couvre le modèle conceptuel (MCD), le passage au modèle logique, la création des tables en SQL et l'écriture de requêtes pour répondre à des questions métier.",
+    sousTitre: "SAÉ — BUT Informatique 1ère année",
+    description: "Conception et création d'une base de données relationnelle pour une médiathèque fictive. Le projet couvre le modèle conceptuel de données (MCD), le passage au modèle logique (MLD), la création des tables en SQL avec contraintes, et l'écriture de requêtes pour répondre aux besoins des usagers et du personnel.",
     objectifs: [
       "Concevoir un modèle conceptuel de données (MCD)",
-      "Créer les tables avec les bonnes contraintes",
-      "Écrire des requêtes SQL (SELECT, JOIN, GROUP BY)",
-      "Documenter la base de données"
+      "Transformer le MCD en modèle logique et créer les tables SQL",
+      "Écrire des requêtes SQL avec jointures et agrégations",
+      "Documenter la base de données (dictionnaire de données)"
     ],
-    groupe: "Projet réalisé en groupe de 3 dans le cadre du cours de bases de données. Chaque membre a pris en charge une partie du modèle.",
-    individuel: "J'ai conçu la partie du MCD liée aux emprunts et adhérents, créé les tables correspondantes et écrit les requêtes complexes avec des jointures.",
+    groupe: "Projet réalisé en groupe de 3 dans le cadre d'une SAÉ de bases de données. Chaque membre du groupe a pris en charge une partie du modèle et des requêtes.",
+    individuel: "J'ai conçu la partie du MCD liée aux emprunts et aux adhérents, créé les tables correspondantes avec les contraintes d'intégrité, et écrit les requêtes complexes impliquant des jointures et des fonctions d'agrégation.",
     competences: [
-      "Modélisation conceptuelle (entités, associations)",
-      "Création de tables SQL avec contraintes",
-      "Écriture de requêtes SELECT avec jointures",
-      "Travail en équipe et répartition des tâches"
+      "C4 — Gérer les données : concevoir une base de données relationnelle à partir d'un cahier des charges",
+      "C4 — Mettre à jour et interroger une base de données relationnelle",
+      "C5 — Conduire un projet : appréhender les besoins du client",
+      "C6 — Travailler en équipe : identifier les rôles dans l'équipe"
     ],
     techniques: [
-      "Modèle Conceptuel de Données (MCD)",
-      "SQL : CREATE TABLE, INSERT, SELECT",
-      "Jointures (INNER JOIN, LEFT JOIN)",
-      "Fonctions d'agrégation (COUNT, AVG, GROUP BY)"
+      "Modèle Conceptuel de Données (MCD) avec entités et associations",
+      "SQL : CREATE TABLE avec clés primaires, étrangères et contraintes",
+      "Requêtes SELECT avec JOIN, GROUP BY, HAVING",
+      "Fonctions d'agrégation (COUNT, SUM, AVG)"
     ],
-    techs: ["SQL", "PostgreSQL", "Draw.io"]
+    techs: ["SQL", "PostgreSQL", "Draw.io", "pgAdmin"]
   },
   {
-    emoji: "🐍",
-    titre: "Script Python — Analyse de données",
-    sousTitre: "Projet universitaire — BUT Informatique 1ère année",
-    description: "Programme Python qui lit un fichier CSV contenant des données (notes d'étudiants), calcule des statistiques (moyenne, médiane, écart-type) et affiche un résumé formaté dans le terminal. Premier contact avec le traitement de données.",
+    emoji: "🌐",
+    titre: "Site Web — Portfolio",
+    sousTitre: "Projet personnel — BUT Informatique 1ère année",
+    description: "Développement de ce portfolio en HTML, CSS et JavaScript. Le site présente mon parcours, mes projets et mes compétences. Il intègre un système de navigation par ancres, des animations CSS et un formulaire de contact. C'est mon premier projet web complet.",
     objectifs: [
-      "Lire et parser un fichier CSV en Python",
-      "Calculer des statistiques de base",
-      "Formater et afficher les résultats proprement",
-      "Gérer les erreurs (fichier manquant, données invalides)"
+      "Apprendre les bases du HTML sémantique et du CSS",
+      "Créer un site responsive adapté au mobile",
+      "Ajouter de l'interactivité avec JavaScript (modale, scroll)",
+      "Mettre en ligne le site sur GitHub Pages"
     ],
-    groupe: "Projet individuel réalisé dans le cadre du cours d'initiation à Python.",
-    individuel: "J'ai développé l'intégralité du script : lecture du fichier, traitement des données, calculs statistiques et affichage des résultats.",
+    groupe: "Projet personnel développé seul, en dehors des cours, pour apprendre le développement web et avoir un support pour présenter mes travaux.",
+    individuel: "J'ai conçu la maquette, écrit tout le code HTML/CSS/JavaScript, et appris à utiliser Git et GitHub pour versionner et publier le site.",
     competences: [
-      "Programmation Python (boucles, fonctions, listes)",
-      "Manipulation de fichiers CSV",
-      "Calculs mathématiques de base",
-      "Gestion d'erreurs (try/except)"
+      "C1 — Réaliser : développer des interfaces utilisateurs",
+      "C1 — Élaborer et implémenter des conceptions simples",
+      "C2 — Optimiser : analyser un problème avec méthode (responsive design)",
+      "C6 — Travailler en équipe : rendre compte de son activité professionnelle (portfolio)"
     ],
     techniques: [
-      "Module csv de Python pour lire les données",
-      "Listes et dictionnaires pour stocker les résultats",
-      "Fonctions personnalisées pour les calculs",
-      "Formatage de chaînes (f-strings)"
+      "HTML5 sémantique et accessibilité de base",
+      "CSS : variables, Flexbox, Grid, media queries, animations",
+      "JavaScript : manipulation du DOM, événements, scroll",
+      "Git pour le versionnage et GitHub Pages pour le déploiement"
     ],
-    techs: ["Python"]
+    techs: ["HTML", "CSS", "JavaScript", "Git", "GitHub Pages"]
   }
 ];
 
-/* ── Navigation entre pages ── */
-function allerPage(nom) {
-  /* Cacher toutes les pages */
-  var pages = document.querySelectorAll('.page');
-  pages.forEach(function(p) { p.classList.remove('active'); });
-
-  /* Afficher la page demandée */
-  var page = document.getElementById('page-' + nom);
-  if (page) {
-    page.classList.add('active');
-    /* Relancer l'animation */
-    page.style.animation = 'none';
-    page.offsetHeight; /* forcer le reflow */
-    page.style.animation = '';
-  }
-
-  /* Mettre à jour le lien actif dans la navbar */
-  var liens = document.querySelectorAll('.nav-link');
-  liens.forEach(function(l) {
-    l.classList.remove('active');
-    if (l.getAttribute('data-page') === nom) {
-      l.classList.add('active');
-    }
-  });
-
-  window.scrollTo(0, 0);
-}
-
-/* ── Afficher le détail d'un projet ── */
-function allerDetail(index) {
+/* ── Ouvrir la modale de détail d'un projet ── */
+function ouvrirDetail(index) {
   var p = projets[index];
 
   document.getElementById('detail-emoji').textContent = p.emoji;
@@ -186,28 +158,80 @@ function allerDetail(index) {
     badgesEl.appendChild(span);
   });
 
-  allerPage('detail');
+  /* Afficher la modale */
+  document.getElementById('modale-overlay').classList.add('visible');
+  document.body.style.overflow = 'hidden';
 }
 
-/* ── Toggle mode clair / sombre ── */
-function toggleMode() {
-  var body = document.body;
-  var btn = document.getElementById('btn-mode');
-  body.classList.toggle('clair');
+/* ── Fermer la modale ── */
+function fermerDetail(event) {
+  /* Si appelé depuis l'overlay, ne fermer que si on clique sur l'overlay lui-même */
+  if (event && event.target !== document.getElementById('modale-overlay')) return;
+  document.getElementById('modale-overlay').classList.remove('visible');
+  document.body.style.overflow = '';
+}
 
-  if (body.classList.contains('clair')) {
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke="currentColor"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
-  } else {
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>';
+/* Fermer avec la touche Echap */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    fermerDetail();
   }
+});
+
+/* ── Mise à jour du lien actif dans la navbar au scroll ── */
+window.addEventListener('scroll', function() {
+  var sections = document.querySelectorAll('section[id]');
+  var scrollPos = window.scrollY + 120;
+  var liens = document.querySelectorAll('.nav-link');
+
+  /* Si on est en bas de page, activer le dernier lien (Contact) */
+  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 50) {
+    liens.forEach(function(l) { l.classList.remove('active'); });
+    var dernier = sections[sections.length - 1];
+    if (dernier) {
+      liens.forEach(function(l) {
+        if (l.getAttribute('href') === '#' + dernier.getAttribute('id')) {
+          l.classList.add('active');
+        }
+      });
+    }
+    return;
+  }
+
+  sections.forEach(function(section) {
+    var top = section.offsetTop;
+    var height = section.offsetHeight;
+    var id = section.getAttribute('id');
+
+    if (scrollPos >= top && scrollPos < top + height) {
+      liens.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + id) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+});
+
+/* ── Menu burger (mobile) ── */
+function toggleMenu() {
+  document.querySelector('.nav-liens').classList.toggle('open');
 }
+
+/* Fermer le menu quand on clique sur un lien */
+document.querySelectorAll('.nav-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.querySelector('.nav-liens').classList.remove('open');
+  });
+});
 
 /* ── Formulaire de contact ── */
 function envoyerFormulaire(event) {
   event.preventDefault();
   var bouton = event.target.querySelector('.btn-envoyer');
   bouton.textContent = 'Message envoyé !';
-  bouton.style.backgroundColor = '#10b981';
+  bouton.style.backgroundColor = '#22c55e';
   event.target.reset();
   setTimeout(function() {
     bouton.textContent = 'Envoyer';
