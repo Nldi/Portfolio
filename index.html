@@ -1,114 +1,94 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Votre Nom</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Furkan Ugurlu — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
- 
- 
- <!-- ===============================
-       NAVBAR
-  =============================== -->
 </head>
 <body>
+
+  <!-- Fond animé -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- NAVBAR -->
   <nav>
-    <div class="nav-avatar" onclick="allerPage('accueil')">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="8" r="4"/>
-        <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
-      </svg>
-    </div>
-
+    <div class="nav-nom" onclick="allerPage('accueil')">F.U</div>
     <ul class="nav-liens">
-      <li><a href="#" onclick="allerPage('accueil'); return false;">Accueil</a></li>
-      <li><a href="#" onclick="allerPage('projets'); return false;">Projets</a></li>
-      <li><a href="#" onclick="allerPage('competences'); return false;">Compétences</a></li>
-      <li><a href="#" onclick="allerPage('formation'); return false;">Formation</a></li>
-      <li><a href="#" onclick="allerPage('contact'); return false;">Contact</a></li>
+      <li><a href="#" onclick="allerPage('accueil'); return false;" class="nav-link active" data-page="accueil">Accueil</a></li>
+      <li><a href="#" onclick="allerPage('projets'); return false;" class="nav-link" data-page="projets">Projets</a></li>
+      <li><a href="#" onclick="allerPage('competences'); return false;" class="nav-link" data-page="competences">Compétences</a></li>
+      <li><a href="#" onclick="allerPage('formation'); return false;" class="nav-link" data-page="formation">Formation</a></li>
+      <li><a href="#" onclick="allerPage('contact'); return false;" class="nav-link" data-page="contact">Contact</a></li>
     </ul>
-
-    <div class="nav-droite">
-      <a href="#" class="nav-icone" title="GitHub">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-        </svg>
-      </a>
-      <button class="nav-icone" onclick="toggleMode()" id="btn-mode" title="Mode clair / sombre">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
-      </button>
-    </div>
+    <button class="btn-theme" onclick="toggleMode()" id="btn-mode" title="Changer de thème">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+      </svg>
+    </button>
   </nav>
 
-  <!-- ===============================
-       PAGE : ACCUEIL
-  =============================== -->
+  <!-- ====== PAGE ACCUEIL ====== -->
   <div class="page active" id="page-accueil">
     <main>
 
-      <!-- Présentation -->
-      <section>
-        <div class="carte profil">
-          <div class="profil-avatar">
-            <svg viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="24" cy="18" r="9"/>
-              <path d="M8 42c0-8.84 7.16-16 16-16s16 7.16 16 16"/>
-            </svg>
+      <section class="hero">
+        <div class="hero-texte">
+          <p class="hero-salut">Salut, moi c'est</p>
+          <h1 class="hero-nom">Furkan Ugurlu</h1>
+          <p class="hero-role">Étudiant en <span class="accent">BUT Informatique</span> — IUT2 de Grenoble</p>
+          <p class="hero-bio">
+            Passionné par le développement web et la programmation depuis le lycée.
+            En première année de BUT Informatique, je découvre chaque jour de nouvelles
+            technologies et j'aime construire des petits projets pour apprendre en pratiquant.
+          </p>
+          <div class="hero-liens">
+            <a href="#" class="btn-principal" onclick="allerPage('projets'); return false;">Voir mes projets</a>
+            <a href="#" class="btn-secondaire" onclick="allerPage('contact'); return false;">Me contacter</a>
           </div>
-          <div>
-            <div class="profil-nom">Furkan Ugurlu</div>
-            <div class="profil-role">Étudiant BUT Informatique — à l'IUT2 de Grenoble</div>
-            <p class="profil-bio">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe rem, 
-              architecto est sed porro officia eos ex ipsum aut consectetur et! Pariatur, 
-              recusandae ipsum fugit eligendi aut fugiat doloribus quisquam.
-            </p>
-            <div class="profil-infos">
-              <span class="info-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                France
-              </span>
-              <span class="info-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-                <a href="#">p.nom [at] etudiant.univ.fr</a>
-              </span>
-              <span class="info-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                <a href="#">github.com/votrenom</a>
-              </span>
-              <span class="info-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                <a href="#">linkedin.com/in/votrenom</a>
-              </span>
+        </div>
+        <div class="hero-visuel">
+          <div class="hero-card">
+            <div class="code-bloc">
+              <span class="code-ligne"><span class="code-mot">const</span> etudiant = {</span>
+              <span class="code-ligne indent"><span class="code-cle">nom</span>: <span class="code-str">"Furkan"</span>,</span>
+              <span class="code-ligne indent"><span class="code-cle">formation</span>: <span class="code-str">"BUT Info"</span>,</span>
+              <span class="code-ligne indent"><span class="code-cle">annee</span>: <span class="code-num">1</span>,</span>
+              <span class="code-ligne indent"><span class="code-cle">motivé</span>: <span class="code-bool">true</span></span>
+              <span class="code-ligne">};</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Diplômes obtenus -->
-      <section>
-        <p class="section-titre-petit">Diplômes</p>
-        <h2>Formations &amp; diplômes</h2>
-        <div class="diplomes-grid">
-          <div class="diplome-card">
-            <div class="diplome-annee">2023 – 2026 (en cours)</div>
-            <div class="diplome-titre">BUT Informatique</div>
-            <div class="diplome-lieu">IUT de votre ville</div>
+      <!-- Infos rapides -->
+      <section class="infos-rapides">
+        <div class="info-card">
+          <div class="info-icone">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <div class="diplome-card">
-            <div class="diplome-annee">2023</div>
-            <div class="diplome-titre">Baccalauréat STI2D</div>
-            <div class="diplome-lieu">Lycée Polyvalent Vaucanson</div>
+          <div class="info-label">Localisation</div>
+          <div class="info-valeur">Grenoble, France</div>
+        </div>
+        <div class="info-card">
+          <div class="info-icone">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg>
           </div>
-          <div class="diplome-card">
-            <div class="diplome-annee">Été 2025</div>
-            <div class="diplome-titre">Stage — Développeur Web</div>
-            <div class="diplome-lieu">Nom de l'entreprise · 2 mois</div>
+          <div class="info-label">Formation</div>
+          <div class="info-valeur">BUT Informatique — 1ère année</div>
+        </div>
+        <div class="info-card">
+          <div class="info-icone">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
+          <div class="info-label">Passion</div>
+          <div class="info-valeur">Développement Web</div>
         </div>
       </section>
 
@@ -116,287 +96,321 @@
     <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
   </div>
 
-  <!-- ===============================
-       PAGE : PROJETS (liste)
-  =============================== -->
+  <!-- ====== PAGE PROJETS ====== -->
   <div class="page" id="page-projets">
     <main>
       <section>
-        <p class="section-titre-petit">Réalisations</p>
+        <p class="section-label">Mes réalisations</p>
         <h2>Projets</h2>
         <div class="grille-projets">
 
           <div class="projet-card" onclick="allerDetail(0)">
-            <div class="projet-image">🌐</div>
-            <div class="projet-body">
-              <div class="projet-nom">Application Web Full-Stack</div>
-              <p class="projet-description">Application complète avec authentification, base de données et API REST. Déployée sur VPS.</p>
-              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div>
-              <button class="projet-lien">
-                Voir le détail
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
+            <div class="projet-icone">🌐</div>
+            <div class="projet-contenu">
+              <h3 class="projet-nom">Site Web Personnel</h3>
+              <p class="projet-desc">Mon premier site web réalisé en HTML et CSS pur. Un portfolio simple pour apprendre les bases du web.</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
             </div>
           </div>
 
           <div class="projet-card" onclick="allerDetail(1)">
-            <div class="projet-image">🖧</div>
-            <div class="projet-body">
-              <div class="projet-nom">Infrastructure Réseau</div>
-              <p class="projet-description">Mise en place d'une infrastructure sécurisée avec monitoring, pare-feu et gestion centralisée.</p>
-              <div class="tags"><span class="tag">Linux</span><span class="tag">Docker</span><span class="tag">Ansible</span></div>
-              <button class="projet-lien">
-                Voir le détail
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
+            <div class="projet-icone">🎮</div>
+            <div class="projet-contenu">
+              <h3 class="projet-nom">Jeu du Pendu en Java</h3>
+              <p class="projet-desc">Jeu du pendu en console développé en Java. Gestion de fichiers pour les listes de mots et boucle de jeu.</p>
+              <div class="tags">
+                <span class="tag">Java</span>
+              </div>
             </div>
           </div>
 
           <div class="projet-card" onclick="allerDetail(2)">
-            <div class="projet-image">📱</div>
-            <div class="projet-body">
-              <div class="projet-nom">Application Mobile</div>
-              <p class="projet-description">Application cross-platform avec synchronisation cloud en temps réel et notifications push.</p>
-              <div class="tags"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">TypeScript</span></div>
-              <button class="projet-lien">
-                Voir le détail
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
+            <div class="projet-icone">🗃️</div>
+            <div class="projet-contenu">
+              <h3 class="projet-nom">Base de Données Médiathèque</h3>
+              <p class="projet-desc">Conception et création d'une base de données pour gérer les emprunts d'une médiathèque avec SQL.</p>
+              <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
             </div>
           </div>
 
           <div class="projet-card" onclick="allerDetail(3)">
-            <div class="projet-image">📊</div>
-            <div class="projet-body">
-              <div class="projet-nom">Dashboard Analytics</div>
-              <p class="projet-description">Tableau de bord de visualisation de données avec graphiques interactifs et export PDF.</p>
-              <div class="tags"><span class="tag">Vue.js</span><span class="tag">Python</span><span class="tag">Chart.js</span></div>
-              <button class="projet-lien">
-                Voir le détail
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
+            <div class="projet-icone">🐍</div>
+            <div class="projet-contenu">
+              <h3 class="projet-nom">Script Python — Analyse de données</h3>
+              <p class="projet-desc">Programme Python pour lire un fichier CSV, calculer des statistiques et afficher les résultats sous forme de texte.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+              </div>
             </div>
           </div>
 
         </div>
       </section>
     </main>
-    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
   </div>
 
-  <!-- ===============================
-       PAGE : DETAIL PROJET (PPP)
-  =============================== -->
+  <!-- ====== PAGE DETAIL PROJET ====== -->
   <div class="page" id="page-detail">
     <main>
-      <button class="ppp-back" onclick="allerPage('projets')">
+      <button class="btn-retour" onclick="allerPage('projets')">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Retour aux projets
       </button>
 
-      <div class="ppp-header">
-        <div class="ppp-emoji" id="detail-emoji">🌐</div>
+      <div class="detail-header">
+        <span class="detail-emoji" id="detail-emoji">🌐</span>
         <div>
           <h1 id="detail-titre">Titre du projet</h1>
-          <p id="detail-sous-titre">Sous-titre</p>
+          <p class="detail-sous-titre" id="detail-sous-titre">Sous-titre</p>
         </div>
       </div>
 
-      <div class="ppp-grid">
-        <div class="ppp-section">
+      <div class="detail-grille">
+        <div class="detail-bloc">
           <h3>Description</h3>
           <p id="detail-description">—</p>
         </div>
-        <div class="ppp-section">
+        <div class="detail-bloc">
           <h3>Objectifs</h3>
           <ul id="detail-objectifs"></ul>
         </div>
       </div>
 
-      <div class="ppp-grid">
-        <div class="ppp-section">
+      <div class="detail-grille">
+        <div class="detail-bloc">
           <h3>Travail en groupe</h3>
           <p id="detail-groupe">—</p>
         </div>
-        <div class="ppp-section">
-          <h3>Mon rôle individuel</h3>
+        <div class="detail-bloc">
+          <h3>Mon rôle</h3>
           <p id="detail-individuel">—</p>
         </div>
       </div>
 
-      <div class="ppp-grid">
-        <div class="ppp-section">
+      <div class="detail-grille">
+        <div class="detail-bloc">
           <h3>Compétences mobilisées</h3>
           <ul id="detail-competences"></ul>
         </div>
-        <div class="ppp-section">
-          <h3>Techniques &amp; savoirs acquis</h3>
+        <div class="detail-bloc">
+          <h3>Ce que j'ai appris</h3>
           <ul id="detail-techniques"></ul>
         </div>
       </div>
 
-      <div class="ppp-grid full">
-        <div class="ppp-section">
-          <h3>Technologies utilisées</h3>
-          <div class="ppp-badges" id="detail-techs"></div>
+      <div class="detail-grille full">
+        <div class="detail-bloc">
+          <h3>Technologies</h3>
+          <div class="detail-badges" id="detail-techs"></div>
         </div>
       </div>
-
     </main>
-    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
   </div>
 
-  <!-- ===============================
-       PAGE : COMPETENCES
-  =============================== -->
+  <!-- ====== PAGE COMPETENCES ====== -->
   <div class="page" id="page-competences">
     <main>
       <section>
-        <p class="section-titre-petit">Savoir-faire</p>
+        <p class="section-label">Ce que je sais faire</p>
         <h2>Compétences</h2>
-        <div class="grille-competences">
-          <div>
-            <p class="groupe-titre">Développement</p>
-            <div class="competence">
-              <div class="competence-ligne">JavaScript / TypeScript <span>Avancé</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:85%"></div></div>
+        <div class="competences-container">
+
+          <div class="comp-groupe">
+            <h3 class="comp-titre">Langages</h3>
+            <div class="comp-item">
+              <span class="comp-nom">HTML / CSS</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+              </div>
             </div>
-            <div class="competence">
-              <div class="competence-ligne">React / Vue.js <span>Intermédiaire</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:75%"></div></div>
+            <div class="comp-item">
+              <span class="comp-nom">JavaScript</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
-            <div class="competence">
-              <div class="competence-ligne">Python <span>Intermédiaire</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:70%"></div></div>
+            <div class="comp-item">
+              <span class="comp-nom">Java</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
-            <div class="competence">
-              <div class="competence-ligne">SQL / PostgreSQL <span>Intermédiaire</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:65%"></div></div>
+            <div class="comp-item">
+              <span class="comp-nom">Python</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="comp-item">
+              <span class="comp-nom">SQL</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
           </div>
-          <div>
-            <p class="groupe-titre">Systèmes et Réseaux</p>
-            <div class="competence">
-              <div class="competence-ligne">Linux / Bash <span>Avancé</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:80%"></div></div>
+
+          <div class="comp-groupe">
+            <h3 class="comp-titre">Outils & Méthodes</h3>
+            <div class="comp-item">
+              <span class="comp-nom">Git / GitHub</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
-            <div class="competence">
-              <div class="competence-ligne">Docker <span>Intermédiaire</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:70%"></div></div>
+            <div class="comp-item">
+              <span class="comp-nom">Linux (Ubuntu)</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
-            <div class="competence">
-              <div class="competence-ligne">Réseaux TCP/IP, VLAN <span>Intermédiaire</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:65%"></div></div>
+            <div class="comp-item">
+              <span class="comp-nom">VS Code</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+              </div>
             </div>
-            <div class="competence">
-              <div class="competence-ligne">Git <span>Courant</span></div>
-              <div class="barre-fond"><div class="barre-remplie" style="width:72%"></div></div>
+            <div class="comp-item">
+              <span class="comp-nom">Terminal / Bash</span>
+              <div class="comp-dots">
+                <span class="dot plein"></span>
+                <span class="dot plein"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
           </div>
+
         </div>
       </section>
     </main>
-    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
   </div>
 
-  <!-- ===============================
-       PAGE : FORMATION
-  =============================== -->
+  <!-- ====== PAGE FORMATION ====== -->
   <div class="page" id="page-formation">
     <main>
       <section>
-        <p class="section-titre-petit">Parcours</p>
+        <p class="section-label">Mon parcours</p>
         <h2>Formation</h2>
+        <div class="timeline">
 
-        <div class="formation-item">
-          <div class="formation-point"></div>
-          <div>
-            <div class="formation-annee">2023 – 2026 (en cours)</div>
-            <div class="formation-titre">BUT Informatique</div>
-            <div class="formation-lieu">IUT de votre ville — Parcours Développement Web</div>
+          <div class="timeline-item actuel">
+            <div class="timeline-marqueur"></div>
+            <div class="timeline-contenu">
+              <span class="timeline-date">2024 – 2027 (en cours)</span>
+              <h3>BUT Informatique</h3>
+              <p>IUT2 de Grenoble — Parcours réalisation d'applications</p>
+            </div>
           </div>
-        </div>
-        <div class="formation-item">
-          <div class="formation-point ancien"></div>
-          <div>
-            <div class="formation-annee">Été 2025</div>
-            <div class="formation-titre">Stage — Développeur Web</div>
-            <div class="formation-lieu">Nom de l'entreprise · 2 mois</div>
+
+          <div class="timeline-item">
+            <div class="timeline-marqueur"></div>
+            <div class="timeline-contenu">
+              <span class="timeline-date">2024</span>
+              <h3>Baccalauréat STI2D</h3>
+              <p>Lycée Polyvalent Vaucanson — Grenoble</p>
+            </div>
           </div>
-        </div>
-        <div class="formation-item">
-          <div class="formation-point ancien"></div>
-          <div>
-            <div class="formation-annee">2023</div>
-            <div class="formation-titre">Baccalauréat STI2D</div>
-            <div class="formation-lieu">Lycée de votre ville · Mention Bien</div>
-          </div>
+
         </div>
       </section>
     </main>
-    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
   </div>
 
-  <!-- ===============================
-       PAGE : CONTACT
-  =============================== -->
+  <!-- ====== PAGE CONTACT ====== -->
   <div class="page" id="page-contact">
     <main>
       <section>
-        <p class="section-titre-petit">Me joindre</p>
+        <p class="section-label">Me joindre</p>
         <h2>Contact</h2>
-        <div class="contact-grille">
+        <div class="contact-layout">
 
-          <div>
-            <p class="contact-texte">
-              Disponible pour une alternance, un stage ou tout échange autour d'un projet.
-              N'hésitez pas à me contacter, je réponds rapidement !
+          <div class="contact-info">
+            <p class="contact-intro">
+              Je suis ouvert à tout échange autour de projets, de stages ou simplement
+              pour discuter informatique. N'hésitez pas !
             </p>
             <div class="contact-liens">
-              <a href="#" class="contact-lien">
+              <a href="mailto:furkan.ugurlu@etu.univ-grenoble-alpes.fr" class="contact-lien">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-                p.nom [at] etudiant.univ.fr
+                furkan.ugurlu [at] etu.univ-grenoble-alpes.fr
               </a>
               <a href="#" class="contact-lien">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                github.com/votrenom
-              </a>
-              <a href="#" class="contact-lien">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                linkedin.com/in/votrenom
+                github.com/furkanugurlu
               </a>
             </div>
           </div>
 
           <form class="formulaire" onsubmit="envoyerFormulaire(event)">
-            <div class="formulaire-ligne">
-              <div>
+            <div class="form-row">
+              <div class="form-group">
                 <label for="nom">Nom</label>
                 <input type="text" id="nom" placeholder="Votre nom" required>
               </div>
-              <div>
+              <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="votre@email.com" required>
               </div>
             </div>
-            <div>
+            <div class="form-group">
               <label for="sujet">Sujet</label>
               <input type="text" id="sujet" placeholder="Objet du message" required>
             </div>
-            <div>
+            <div class="form-group">
               <label for="message">Message</label>
               <textarea id="message" placeholder="Votre message..." required></textarea>
             </div>
-            <button type="submit" class="bouton-envoyer">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Envoyer
-            </button>
+            <button type="submit" class="btn-envoyer">Envoyer</button>
           </form>
 
         </div>
       </section>
     </main>
-    <footer>© 2025 Prénom Nom — Portfolio BUT Informatique</footer>
+    <footer>© 2025 Furkan Ugurlu — Portfolio BUT Informatique</footer>
   </div>
 
 </body>
+</html>
